@@ -38,6 +38,9 @@
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="足し算" image="plus" catalog="system" id="hsR-do-DyZ"/>
+                    <connections>
+                        <outlet property="calculatorView" destination="NrT-b1-MMz" id="dgZ-pO-ztb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWj-Pn-mYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,6 +57,9 @@
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="引き算" image="minus" catalog="system" id="GHQ-fT-QFX"/>
+                    <connections>
+                        <outlet property="calculatorView" destination="zvP-LA-qTo" id="ko3-op-EUN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPI-BP-NQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
