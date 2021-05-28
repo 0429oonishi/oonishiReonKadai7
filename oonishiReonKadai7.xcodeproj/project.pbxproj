@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AB86F3D6265E037C004F6C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86F3D5265E037C004F6C71 /* AppDelegate.swift */; };
 		AB86F3D8265E037C004F6C71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86F3D7265E037C004F6C71 /* SceneDelegate.swift */; };
-		AB86F3DA265E037C004F6C71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86F3D9265E037C004F6C71 /* ViewController.swift */; };
 		AB86F3DD265E037C004F6C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86F3DB265E037C004F6C71 /* Main.storyboard */; };
 		AB86F3DF265E0380004F6C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86F3DE265E0380004F6C71 /* Assets.xcassets */; };
 		AB86F3E2265E0380004F6C71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86F3E0265E0380004F6C71 /* LaunchScreen.storyboard */; };
@@ -26,7 +25,6 @@
 		AB86F3D2265E037C004F6C71 /* oonishiReonKadai7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oonishiReonKadai7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB86F3D5265E037C004F6C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB86F3D7265E037C004F6C71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB86F3D9265E037C004F6C71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB86F3DC265E037C004F6C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB86F3DE265E0380004F6C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86F3E1265E0380004F6C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,19 +78,42 @@
 		AB86F3D4265E037C004F6C71 /* oonishiReonKadai7 */ = {
 			isa = PBXGroup;
 			children = (
+				ABC57ABA2660AB2A006C9F08 /* Models */,
+				ABC57ABC2660AB36006C9F08 /* Views */,
+				ABC57ABB2660AB2E006C9F08 /* ViewModels */,
 				AB86F3D5265E037C004F6C71 /* AppDelegate.swift */,
 				AB86F3D7265E037C004F6C71 /* SceneDelegate.swift */,
-				AB86F3DB265E037C004F6C71 /* Main.storyboard */,
-				ABC57AB62660A68B006C9F08 /* CalculatorView.xib */,
-				ABC57AB82660A71E006C9F08 /* CalculatorView.swift */,
-				AB86F3D9265E037C004F6C71 /* ViewController.swift */,
-				ABC57AAE2660A50D006C9F08 /* PlusViewController.swift */,
-				ABC57AB02660A512006C9F08 /* MinusViewController.swift */,
 				AB86F3DE265E0380004F6C71 /* Assets.xcassets */,
 				AB86F3E0265E0380004F6C71 /* LaunchScreen.storyboard */,
 				AB86F3E3265E0380004F6C71 /* Info.plist */,
 			);
 			path = oonishiReonKadai7;
+			sourceTree = "<group>";
+		};
+		ABC57ABA2660AB2A006C9F08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABC57ABB2660AB2E006C9F08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ABC57ABC2660AB36006C9F08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABC57AB62660A68B006C9F08 /* CalculatorView.xib */,
+				ABC57AB82660A71E006C9F08 /* CalculatorView.swift */,
+				AB86F3DB265E037C004F6C71 /* Main.storyboard */,
+				ABC57AAE2660A50D006C9F08 /* PlusViewController.swift */,
+				ABC57AB02660A512006C9F08 /* MinusViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BFFC0FAE0945667E349B1594 /* Frameworks */ = {
@@ -219,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC57AB12660A512006C9F08 /* MinusViewController.swift in Sources */,
-				AB86F3DA265E037C004F6C71 /* ViewController.swift in Sources */,
 				AB86F3D6265E037C004F6C71 /* AppDelegate.swift in Sources */,
 				ABC57AAF2660A50D006C9F08 /* PlusViewController.swift in Sources */,
 				ABC57AB92660A71E006C9F08 /* CalculatorView.swift in Sources */,
