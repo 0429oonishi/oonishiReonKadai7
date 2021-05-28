@@ -25,6 +25,11 @@ final class CalculatorView: UIView {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        firstTextField.resignFirstResponder()
+        secondTextField.resignFirstResponder()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
