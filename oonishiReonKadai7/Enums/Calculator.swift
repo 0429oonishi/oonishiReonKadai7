@@ -7,13 +7,18 @@
 
 import Foundation
 
-enum Calculator {
-    case plus
-    case minus
+protocol CalculatorProtocol {
+    func calculate(firstNum: Int, secondNum: Int) -> Int
+}
+
+struct AdditionCalculator: CalculatorProtocol {
     func calculate(firstNum: Int, secondNum: Int) -> Int {
-        switch self {
-            case .plus: return firstNum + secondNum
-            case .minus: return firstNum - secondNum
-        }
+        firstNum + secondNum
+    }
+}
+
+struct SubtractionCalculator: CalculatorProtocol {
+    func calculate(firstNum: Int, secondNum: Int) -> Int {
+        firstNum - secondNum
     }
 }
