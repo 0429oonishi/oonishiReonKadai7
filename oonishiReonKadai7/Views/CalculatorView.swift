@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CalculatorViewDelegate: AnyObject {
-    func calculate(firstNum: Int, secondNum: Int)
+    func calculate(firstText: String?, secondText: String?)
 }
 
 final class CalculatorView: UIView {
@@ -20,9 +20,7 @@ final class CalculatorView: UIView {
     weak var delegate: CalculatorViewDelegate?
     
     @IBAction private func calculateButtonDidTapped(_ sender: Any) {
-        guard let firstNum = firstTextField.text.flatMap({ Int($0) }),
-              let secondNum = secondTextField.text.flatMap({ Int($0) }) else { return }
-        delegate?.calculate(firstNum: firstNum, secondNum: secondNum)
+        delegate?.calculate(firstText: firstTextField.text, secondText: secondTextField.text)
     }
     
     override func awakeFromNib() {
