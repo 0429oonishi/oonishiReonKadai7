@@ -12,7 +12,9 @@ final class PlusViewController: UIViewController {
     
     @IBOutlet private var calculatorView: CalculatorView!
     
-    private let calculatorViewModel = CalculatorViewModel()
+    private let calculatorViewModel = CalculatorViewModel(
+        calculator: AdditionCalculator()
+    )
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -33,11 +35,10 @@ final class PlusViewController: UIViewController {
 }
 
 extension PlusViewController: CalculatorViewDelegate {
-    func calculate(firstNum: Int, secondNum: Int) {
+    func calculate(firstText: String?, secondText: String?) {
         calculatorViewModel.inputs.calculateButtonDidTapped(
-            firstNum: firstNum,
-            secondNum: secondNum,
-            calculator: .plus
+            firstText: firstText,
+            secondText: secondText
         )
     }
 }
