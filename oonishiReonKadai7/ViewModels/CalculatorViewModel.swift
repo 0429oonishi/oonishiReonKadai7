@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 protocol CalculatorViewModelInput {
-    func calculateButtonDidTapped(firstNum: Int, secondNum: Int, calculator: Calculator)
+//    func calculateButtonDidTapped(firstNum: Int, secondNum: Int, calculator: Calculator)
+    func calculateButtonDidTapped(firstText: String?, secondText: String?)
 }
 
 protocol CalculatorViewModelOutput {
@@ -22,7 +23,20 @@ protocol CalculatorViewModelType {
 }
 
 final class CalculatorViewModel: CalculatorViewModelInput, CalculatorViewModelOutput {
-    func calculateButtonDidTapped(firstNum: Int, secondNum: Int, calculator: Calculator) {
+//    func calculateButtonDidTapped(firstNum: Int, secondNum: Int, calculator: Calculator) {
+//        let resultNum = calculator.calculate(firstNum: firstNum, secondNum: secondNum)
+//        resultNumRelay.accept(resultNum)
+//    }
+    
+    private let calculator: CalculatorProtocol
+    
+    init(calculator: CalculatorProtocol) {
+        self.calculator = calculator
+    }
+    
+    func calculateButtonDidTapped(firstText: String?, secondText: String?) {
+        guard let firstNum = firstText.flatMap({ Int($0) }),
+              let secondNum = secondText.flatMap({ Int($0) }) else { return }
         let resultNum = calculator.calculate(firstNum: firstNum, secondNum: secondNum)
         resultNumRelay.accept(resultNum)
     }
